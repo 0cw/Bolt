@@ -20,3 +20,6 @@
 <img src="./images/demo.png" width="600" height="350"/>
 </a>
 </p>
+<p align="center">
+  <span>Repository created and formatted by <a href="https://github.com/audioo">audioo</a></span>
+</p>
