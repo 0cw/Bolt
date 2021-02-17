@@ -6,7 +6,7 @@
   <span><strong>Demonstration of how Authorization APIs can be taken advantage of.</span>
   <br>
   <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-purple.svg"></a>
-  <a target="_blank" href="VERSION" title="Version: 2.1"><img src="https://img.shields.io/badge/Version-1.0-purple.svg"></a>
+  <a target="_blank" href="VERSION" title="Version: 2.1"><img src="https://img.shields.io/badge/Version-2.1-purple.svg"></a>
 </p>
 
 <p align="center">
