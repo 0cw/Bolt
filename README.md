@@ -1,6 +1,4 @@
 <p align=center>
-
-  <br>
   <span><strong>Demonstration of how Authorization APIs can be taken advantage of.</span>
   <br>
   <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-purple.svg"></a>
