@@ -17,6 +17,6 @@
 
 <p align="center">
 <a href="">
-<img src="./images/demoFast.gif" width="600" height="350"/>
+<img src="./images/demo.png" width="600" height="350"/>
 </a>
 </p>
