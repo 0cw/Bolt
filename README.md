@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/audioo/Bolt-AIO/releases/latest">Download</a>
+  <a href="https://github.com/0cw/Bolt/releases/latest">Download</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://discord.gg/kTZ6q2aEJgp">Discord</a>
 </p>
