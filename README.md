@@ -1,6 +1,6 @@
 <p align=center>
 
-  <img src="images/boltbanner.png" width = "300" height="115"/>
+  <img src="./images/boltbanner.png" width = "300" height="115"/>
 
   <br>
   <span><strong>Demonstration of how Authorization APIs can be taken advantage of.</span>
