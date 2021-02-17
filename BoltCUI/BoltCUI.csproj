@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30F85272-1EAC-44E7-B821-C628A28FB0F2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BoltCUI</RootNamespace>
+    <AssemblyName>Bolt AIO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>512x512-White.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Anarchy, Version=0.8.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Anarchy-wrapper.0.8.0.1\lib\net47\Anarchy.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoUpdater.NET, Version=1.6.4.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.6.4\lib\net45\AutoUpdater.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Colorful.Console, Version=1.2.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Colorful.Console.1.2.15\lib\net461\Colorful.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Discord.Net.Core, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Discord.Net.Core.2.2.0\lib\net461\Discord.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Discord.Net.Rest, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Discord.Net.Rest.2.2.0\lib\net461\Discord.Net.Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="Discord.Net.WebSocket, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Discord.Net.WebSocket.2.2.0\lib\net461\Discord.Net.WebSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordRPC, Version=1.0.169.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordRichPresence.1.0.169\lib\net35\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.xNet, Version=5.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Leaf.xNet.5.2.10\lib\net45\Leaf.xNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.xNet, Version=5.2.10.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Leaf.xNet.5.2.10\lib\net45\Leaf.xNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Interactive.Async, Version=4.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.4.0.0\lib\net461\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Async, Version=4.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Async.4.0.0\lib\net461\System.Linq.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="websocket-sharp, Version=1.0.2.36182, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\better-websocket-sharp.1.0.2.1\lib\net35\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="xNet-Ameliorated, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\other stuffs\stuffs\ConsoleBase\QuanoticsConsoleBase\bin\Debug\xNet-Ameliorated.dll</HintPath>
+    </Reference>
+    <Reference Include="ZeusAntiDebugger, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\Downloads\ZeusAntiDebugger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Discord\Bot.cs" />
+    <Compile Include="Discord\DiscordRPC1.cs" />
+    <Compile Include="Modules\Abvmod.cs" />
+    <Compile Include="Modules\Adflymod.cs" />
+    <Compile Include="Modules\Ahamod.cs" />
+    <Compile Include="Modules\Albertonsmod.cs" />
+    <Compile Include="Modules\Aliexpressmod.cs" />
+    <Compile Include="Modules\aPowersoft.cs" />
+    <Compile Include="Modules\Applemod.cs" />
+    <Compile Include="Modules\Aviramod.cs" />
+    <Compile Include="Modules\Azuremod.cs" />
+    <Compile Include="Modules\Bagelboymod.cs" />
+    <Compile Include="Modules\Beeg.commod.cs" />
+    <Compile Include="Modules\BFWmod.cs" />
+    <Compile Include="Modules\Bitdefendermod.cs" />
+    <Compile Include="Modules\Bitesquadmod.cs" />
+    <Compile Include="Modules\Bitlaunchmod.cs" />
+    <Compile Include="Modules\Blimmod.cs" />
+    <Compile Include="Modules\CBSmod.cs" />
+    <Compile Include="Modules\chaturbatemod.cs" />
+    <Compile Include="Modules\cheggmod.cs" />
+    <Compile Include="Modules\Clarovideomod.cs" />
+    <Compile Include="Modules\Coinbasemod.cs" />
+    <Compile Include="Modules\coinsphmod.cs" />
+    <Compile Include="Modules\ColdStoneCreamerymod.cs" />
+    <Compile Include="Modules\Crunchyrollmod.cs" />
+    <Compile Include="Modules\DCuniversemod.cs" />
+    <Compile Include="Modules\Disneymod.cs" />
+    <Compile Include="Modules\Dominosmod.cs" />
+    <Compile Include="Modules\DoorDashmod.cs" />
+    <Compile Include="Modules\Duolingomod.cs" />
+    <Compile Include="Modules\Easyjetmod.cs" />
+    <Compile Include="Modules\Ebayvaildmod.cs" />
+    <Compile Include="Modules\Elasticmailmod.cs" />
+    <Compile Include="Modules\Facebookmod.cs" />
+    <Compile Include="Modules\filminmod.cs" />
+    <Compile Include="Modules\Fitbitmod.cs" />
+    <Compile Include="Modules\Flightclubmod.cs" />
+    <Compile Include="Modules\Foapmod.cs" />
+    <Compile Include="Modules\Forever21mod.cs" />
+    <Compile Include="Modules\Foxmod.cs" />
+    <Compile Include="Modules\FWRDmod.cs" />
+    <Compile Include="Modules\Gameflymod.cs" />
+    <Compile Include="Modules\GetUpsidemod.cs" />
+    <Compile Include="Modules\Gfuelmod.cs" />
+    <Compile Include="Modules\Godaddymod.cs" />
+    <Compile Include="Modules\GooseVPN.cs" />
+    <Compile Include="Modules\Guccimod.cs" />
+    <Compile Include="Modules\HeadspaceUkmod.cs" />
+    <Compile Include="Modules\HMAmod.cs" />
+    <Compile Include="Modules\HolaVPNmod.cs" />
+    <Compile Include="Modules\Hotspotshieldmod.cs" />
+    <Compile Include="Modules\Hulumod.cs" />
+    <Compile Include="Modules\IbVPNmod.cs" />
+    <Compile Include="Modules\Instagrammod.cs" />
+    <Compile Include="Modules\IpVanishmod.cs" />
+    <Compile Include="Modules\KFCMod.cs" />
+    <Compile Include="Modules\later.commod.cs" />
+    <Compile Include="Modules\Leageoflegendsmod.cs" />
+    <Compile Include="Modules\Luminatimod.cs" />
+    <Compile Include="Modules\McAfeemod.cs" />
+    <Compile Include="Modules\Minecraftmod.cs" />
+    <Compile Include="Modules\Minglemod.cs" />
+    <Compile Include="Modules\MyCanalmod.cs" />
+    <Compile Include="Modules\Napstermod.cs" />
+    <Compile Include="Modules\NBAmod.cs" />
+    <Compile Include="Modules\Netflixmod.cs" />
+    <Compile Include="Modules\NordVPNmod.cs" />
+    <Compile Include="Modules\Onlyfansmod.cs" />
+    <Compile Include="Modules\Originmod.cs" />
+    <Compile Include="Modules\Outbackstakehousemod.cs" />
+    <Compile Include="Modules\Patreonmod.cs" />
+    <Compile Include="Modules\Pizzahutmod.cs" />
+    <Compile Include="Modules\Plextvmod.cs" />
+    <Compile Include="Modules\Pornhubmod.cs" />
+    <Compile Include="Modules\Postmatesfleet.cs" />
+    <Compile Include="Modules\Razermod.cs" />
+    <Compile Include="Modules\Robinhoodmod.cs" />
+    <Compile Include="Modules\Scribdmod.cs" />
+    <Compile Include="Modules\Shopifymod.cs" />
+    <Compile Include="Modules\SliceLifemod.cs" />
+    <Compile Include="Modules\SlingTVmod.cs" />
+    <Compile Include="Modules\Smartproxymod.cs" />
+    <Compile Include="Modules\SonyVegasmod.cs" />
+    <Compile Include="Modules\Tunnelbearmod.cs" />
+    <Compile Include="Modules\Twitchmod.cs" />
+    <Compile Include="Modules\UFCmod.cs" />
+    <Compile Include="Modules\Uplay.cs" />
+    <Compile Include="Modules\Venmomod.cs" />
+    <Compile Include="Modules\Vypervpnmod.cs" />
+    <Compile Include="Modules\Wishmod.cs" />
+    <Compile Include="Modules\WWEmod.cs" />
+    <Compile Include="Modules\Xcamsmod.cs" />
+    <Compile Include="Modules\XVPNmod.cs" />
+    <Compile Include="Modules\Yahoo.cs" />
+    <Compile Include="Modules\Zee5.cs" />
+    <Compile Include="Modules\Zenmatemod.cs" />
+    <Compile Include="Modules\Zorrovpnmod.cs" />
+    <Compile Include="Tools\CheckerTools.cs" />
+    <Compile Include="Tools\ComboLeecher.cs" />
+    <Compile Include="Tools\ComboTool.cs" />
+    <Compile Include="Tools\ModulesList.cs" />
+    <Compile Include="Tools\Parser.cs" />
+    <Compile Include="Tools\ProxyTools.cs" />
+    <Compile Include="Tools\SettingsTools.cs" />
+    <Compile Include="Tools\Sniper.cs" />
+    <Compile Include="Tools\TokenCheckerandScraper.cs" />
+    <Compile Include="Tools\VulnScanner.cs" />
+    <Compile Include="Utilities\Export.cs" />
+    <Compile Include="Utilities\Functions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Settings.cs" />
+    <Compile Include="Utilities\Variables.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="512x512-White.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.6.0.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.0.0\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.0.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.0.0\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
+  </Target>
+</Project>
